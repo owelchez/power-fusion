@@ -1,0 +1,150 @@
+html 
+{ 
+  background: url("assets/images/dragon.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p
+{
+    font-size: 13px;
+}
+
+.images
+{
+    width: 80px;
+    height: 90px;
+    float:left;
+    display:inline;
+    margin: 3px;
+}
+
+#images1
+{
+    z-index: 1;
+    width: 80px;
+    height: 90px;
+    float:left;
+    margin: 3px;
+}
+
+#picture
+{
+    width:830;
+    background-color:white;
+    height:120px;
+    overflow:scroll;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.wrapper
+{
+    width: 350px;
+    margin-left: 10px;
+}
+
+.jumbotron 
+{
+    margin-top: 5px;
+    float: left;
+    background: rgba(200, 54, 54, 0.8);
+    text-align: center;
+    border-radius: 10px;
+    padding: 0.5em 0.6em;
+    font-family: cursive;
+    width: 350px;
+    height: 60px;
+}
+
+.jumbotron h1 
+{
+    font-size: 18px;
+    color: yellow;
+    text-shadow: red 5px;
+}
+
+.btn-primary
+{
+    float: left;
+}
+
+
+
+.instructions
+{
+    float: left;
+    width: 350px;
+    background-color: white;
+    background: rgba(200, 54, 54, 0.5);
+    border-radius: 10px;
+    color: yellow;
+}
+
+#scoreCounter
+{
+    margin: 5px;
+    border-radius: 10px;
+    float: left;
+    width: 200px;
+    height: 90px;
+    background-color: white;
+    background: rgba(200, 54, 54, 0.5);
+    color: yellow;
+    text-align: center;
+    font-size: 50px;
+}
+
+#totalScore
+{
+    width: 220px;
+    height: 20px;
+    background-color: white;
+    background: rgba(200, 54, 54, 0.5);
+    color: yellow;
+    float: left;
+}
+
+#attackScore
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 100px;
+    background-color: white;
+    background: rgba(200, 54, 54, 0.5);
+    color: yellow;
+    float: left;
+}
+
+#winLose
+{
+    margin: 5px;
+    border-radius: 10px;
+    width: 70px;
+    height: 90px;
+    background-color: white;
+    background: rgba(200, 54, 54, 0.5);
+    color: yellow;
+    float: left;
+}
+
+#winCounter
+{
+    margin-top: 15px;
+}
+
+#loseCounter
+{
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 600)
+{
+    body
+    {
+        min-width:400px;
+    }
+}

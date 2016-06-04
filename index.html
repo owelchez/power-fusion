@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html class="col-md-6">
 <head>
 	<title>My Power Attack</title>
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<!-- BootStrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<!-- JQuery -->
 		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+		<!-- My Styling -->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
 		<style>
 			html 
@@ -20,13 +23,66 @@
 
 		</style>
 
-		<div><h1>Super Sayan Attack!</h1></div>
+		
 
 </head>
 <body>
 <div class="wrapper">
+		
+		<div class="jumbotron">
+		  	<h1><strong>Super Saiyan Fusion Attack!</strong></h1>  
+		</div>
+		
 	
+	<div class="instructions">
+			<p>
+				<strong>You will be given a random power attack at the start of the game. 
+						By clicking on any of the four attacks you will add a specific amount of points to your total score. <br>
+						Once your total score matches that of the power attack on the top, you 
+						will be able to fuse and win the game. You lose the game if your total score goes above the power attack on the top. <br>
+						The value of each power attack at the bottom is hidden from you until you click on it.
+						Each time when the game starts, the game will change the values of each power attack.
+				</strong>
+			</p>
 
+	</div>
+
+	<div id="scoreCounter">
+	<div id="images1" src="assets/images/dbzFusion" alt="Fusion" /></div>
+	<p><span>0</span></p></div>
+
+	<div id="winLose">
+		<div id="winCounter"><p>Wins: <span>0</span></p></div>
+		<div id="loseCounter"><p>Losses: <span>0</span></p></div>
+	</div>
+
+	<div>
+
+      <img class="images" src="assets/images/kameha.jpg" alt="Kameha Wave" />
+      <img class="images" src="assets/images/masenko.png" alt="Masenko" />
+      <img class="images" src="assets/images/bigbang.jpg" alt="Big Bang" />
+      <img class="images" src="assets/images/sword.png" alt="Sword" />
+      
+    </div>
+
+
+
+
+<div id="totalScore">
+	<p>Yor total score is:</p>
+</div>
+
+
+
+<div id="attackScore">
+	
+</div>
+
+
+
+
+
+<div></div>
 
 
 
@@ -34,5 +90,12 @@
 
 
 </div>
+
+
+
+<!-- Fix picture inside score counter -->
+
+
+
 </body>
 </html>
