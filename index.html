@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="col-md-6">
 <head>
-	<title>My Power Attack</title>
+	<title>Super Saiyan Fusion Attack</title>
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<!-- BootStrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -20,10 +20,7 @@
 				  background-size: cover;
 			}
 
-
-		</style>
-
-		
+		</style>	
 
 </head>
 <body>
@@ -41,10 +38,10 @@
 	
 	<div class="instructions">
 			<p>
-				<strong>You will be given a random power attack at the start of the game. 
-						By clicking on any of the four attacks you will add a specific amount of points to your total score. <br>
-						Once your total score matches that of the power attack on the top, you 
-						will be able to fuse and win the game. You lose the game if your total score goes above the power attack on the top. <br>
+				<strong>Goten and Trunks will have a random power attack at the start of
+				 		every game. 
+						By clicking on any of the four attacks from Goku, Gohan, Vegeta and Future Trunks, you will help Goten and Trunks to perform the "Fusion Dance".
+						Once your total score matches that of the power attack at the bottom, Goten and Trunks will perform the "Fuse Dance" and you will win the game. You lose the game if your total score goes above the power attack. <br>
 						The value of each power attack at the bottom is hidden from you until you click on it.
 						Each time when the game starts, the game will change the values of each power attack.
 				</strong>
@@ -62,45 +59,32 @@
 		<div id="loseCounter"><p>Losses: <span>0</span></p></div>
 	</div>
 
-	<div>
+		<div>
+	      <img class="images" src="assets/images/kameha.jpg" alt="Kameha Wave" />
+	      <img class="images" src="assets/images/masenko.png" alt="Masenko" />
+	      <img class="images" src="assets/images/bigbang.jpg" alt="Big Bang" />
+	      <img class="images" src="assets/images/sword.png" alt="Sword" />	      
+	    </div>
 
-      <img class="images" src="assets/images/kameha.jpg" alt="Kameha Wave" />
-      <img class="images" src="assets/images/masenko.png" alt="Masenko" />
-      <img class="images" src="assets/images/bigbang.jpg" alt="Big Bang" />
-      <img class="images" src="assets/images/sword.png" alt="Sword" />
-      
-    </div>
+			<div id="totalScore">
+				<p>Your total score is: <span>0</span></p>
+			</div>
 
-
-
-
-<div id="totalScore">
-	<p>Yor total score is: </p>
+<div id="powerAttack">
+	<h3>POWER ATTACK!</h3>
+	<p><span>0</span></p>
 </div>
-
-
-
-<div id="attackScore">
-	
-</div>
-
-
-
 
 
 <div></div>
 
-
-
-
-
-
-</div>
+</div> <!-- Closing tag for wrapper -->
 
 <script>
 
 $(document).ready(function(){
 	
+	/*************************  Audio File For Game  ***********************************/
 			var audioElement = document.createElement('audio');
 				        audioElement.setAttribute('src', 'Assets/chala.mp3');
 
@@ -111,6 +95,10 @@ $(document).ready(function(){
 			$(".pauseButton").on("click", function(){
         		audioElement.pause();
 			});
+
+
+
+
 
 });
 
