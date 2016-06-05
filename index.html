@@ -60,10 +60,10 @@
 	</div>
 
 		<div>
-	      <img class="images" src="assets/images/kameha.jpg" alt="Kameha Wave" />
-	      <img class="images" src="assets/images/masenko.png" alt="Masenko" />
-	      <img class="images" src="assets/images/bigbang.jpg" alt="Big Bang" />
-	      <img class="images" src="assets/images/sword.png" alt="Sword" />	      
+	      <img class="images" src="assets/images/kameha.jpg" id="goku" alt="Kameha Wave" />
+	      <img class="images" src="assets/images/masenko.png" id="gohan" alt="Masenko" />
+	      <img class="images" src="assets/images/bigbang.jpg" id="vegeta" alt="Big Bang" />
+	      <img class="images" src="assets/images/sword.png" id="trunks" alt="Sword" />	      
 	    </div>
 
 			<div id="totalScore">
@@ -96,8 +96,32 @@ $(document).ready(function(){
         		audioElement.pause();
 			});
 
+	/***********************************************************************************/
 
+	var goku = 0;
+	var gohan = 0;
+	var vegeta = 0;
+	var trunks = 0;
+	var totalScore = 0;
+	var powerAttack = 0;
+	var wins = 0;
+	var losses = 0;
 
+	function initializeGame()
+	{
+		goku = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+		gohan = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+		vegeta = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+		trunks = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
+		powerAttack = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+	}
+
+	initializeGame();
+
+	$('goku').on('click' function(){
+		powerAttack = goku + powerAttack;
+		console.log(powerAttack);
+	});
 
 
 });
