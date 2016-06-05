@@ -32,6 +32,11 @@
 		<div class="jumbotron">
 		  	<h1><strong>Super Saiyan Fusion Attack!</strong></h1>  
 		</div>
+
+		<div class="text-center">
+			    <button class="btn btn-warning btn-xs themeButton"><span class="glyphicon glyphicon-music"></span> Play Cha-La!</button>		  	
+		    	<button class="btn btn-default btn-xs pauseButton"><span class="glyphicon glyphicon-pause"></span> Pause Cha-La</button>	
+			</div>
 		
 	
 	<div class="instructions">
@@ -48,8 +53,8 @@
 	</div>
 
 		<div id="scoreCounter">
-			<img src="assets/images/maxresdefault.jpg" id="images2" alt="Kumite" />
-			<img src="assets/images/gotenVStrunks.gif" id="images1" alt="Fight" />
+			<img src="assets/images/newFight.gif" id="images1" alt="Fight" />
+			<!-- <img src="assets/images/gtFusion.gif" id="fusion" alt="Fight" /> -->
 		</div>
 
 	<div id="winLose">
@@ -70,7 +75,7 @@
 
 
 <div id="totalScore">
-	<p>Yor total score is:</p>
+	<p>Yor total score is: </p>
 </div>
 
 
@@ -92,7 +97,24 @@
 
 </div>
 
+<script>
 
+$(document).ready(function(){
+	
+			var audioElement = document.createElement('audio');
+				        audioElement.setAttribute('src', 'Assets/chala.mp3');
+
+	        $(".themeButton").on("click", function(){
+        		audioElement.play();
+			});
+
+			$(".pauseButton").on("click", function(){
+        		audioElement.pause();
+			});
+
+});
+
+</script>
 
 
 
