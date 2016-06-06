@@ -2,6 +2,9 @@
 <html class="col-md-6">
 <head>
 	<title>Super Saiyan Fusion Attack</title>
+
+         <!-- *************************  Libraries  ****************************** -->
+
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 		<!-- BootStrap -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -9,6 +12,8 @@
 		<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 		<!-- My Styling -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+		<!-- *********************************************************************** -->
 
 		<style>
 			html 
@@ -38,12 +43,12 @@
 	
 	<div class="instructions">
 			<p>
-				<strong>Goten and Trunks will have a random power attack at the start of
+				<strong>Goten and Trunks will have a random "Power Attack" at the start of
 				 		every game. 
 						By clicking on any of the four attacks from Goku, Gohan, Vegeta and Future Trunks, you will help Goten and Trunks to perform the "Fusion Dance".
-						Once your total score matches that of the power attack at the bottom, Goten and Trunks will perform the "Fuse Dance" and you will win the game. You lose the game if your total score goes above the power attack. <br>
-						The value of each power attack at the bottom is hidden from you until you click on it.
-						Each time when the game starts, the game will change the values of each power attack.
+						Once your total score matches that of the "Power Attack" at the bottom, Goten and Trunks will perform the "Fuse Dance" and you will win the game. You lose the game if your total score goes above the Power Attack. <br>
+						The value of each Power Attack at the bottom is hidden from you until you click on it.
+						Each time when the game starts, you will get different values for each the attacks.
 				</strong>
 			</p>
 
@@ -78,7 +83,6 @@
 <div></div>
 
 </div> <!-- Closing tag for wrapper -->
-
 <script>
 
 $(document).ready(function(){
@@ -106,7 +110,7 @@ $(document).ready(function(){
 	var wins = 0;
 	var losses = 0;
 
-	function initializeGame()
+	function initializeGame() // Initializes the game and resets 
 	{
 		goku = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 		gohan = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
@@ -127,7 +131,7 @@ $(document).ready(function(){
 				alert("You won!");
 				$("#images1").attr("src", "assets/images/finalFusion.gif");
 				document.querySelector('#winCounter').innerHTML = wins;
-  					$( "#images1" ).delay(2000000);
+				delay(2000);	// (TODO) Random delay for fusion gif 
 			} 	else if(totalScore > powerAttack)
 				{
 					losses+=1;
