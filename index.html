@@ -116,12 +116,43 @@ $(document).ready(function(){
 		powerAttack = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 	}
 
-	initializeGame();
-
-	$('goku').on('click' function(){
-		powerAttack = goku + powerAttack;
-		console.log(powerAttack);
+	$('#goku').on('click', function(event){
+		totalScore += goku;
+		console.log(totalScore);
 	});
+
+	$('#gohan').on('click', function(event){
+		totalScore += gohan;
+		console.log(totalScore);
+	});
+
+	$('#vegeta').on('click', function(event){
+		totalScore += vegeta;
+		console.log(totalScore);
+	});
+
+	$('#trunks').on('click', function(event){
+		totalScore += trunks;
+		console.log(totalScore);
+	});
+
+		function checkWin()
+		{
+			if(totalScore === powerAttack)
+			{
+				alert("You win!");
+			} 	else if(totalScore > powerAttack)
+				{
+					alert("You lost!");
+				}
+		}
+
+		initializeGame();
+		checkWin();
+
+		console.log(powerAttack);
+		console.log(totalScore);
+		
 
 
 });
