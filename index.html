@@ -55,8 +55,8 @@
 		</div>
 
 	<div id="winLose">
-		<div id="winCounter"><p>Wins: <span>0</span></p></div>
-		<div id="loseCounter"><p>Losses: <span>0</span></p></div>
+		<div><p>Wins: <span id="winCounter">0</span></p></div>
+		<div><p>Losses: <span id="loseCounter">0</span></p></div>
 	</div>
 
 		<div>
@@ -72,7 +72,7 @@
 
 <div id="powerAttack">
 	<h3>POWER ATTACK!</h3>
-	<p><span>0</span></p>
+	<p><span id="powerAttackWindow">0</span></p>
 </div>
 
 
@@ -114,6 +114,9 @@ $(document).ready(function(){
 		vegeta = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 		trunks = Math.floor(Math.random() * (12 - 1 + 1)) + 1;
 		powerAttack = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+		totalScore = 0;
+		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
+		document.querySelector('#powerAttackWindow').innerHTML = powerAttack;
 	};
 
 	function checkWin()
@@ -122,13 +125,12 @@ $(document).ready(function(){
 			{
 				wins+=1;
 				alert("You won!");
-				alert(wins);
-				alert("You have won " + wins + " times!");
+				document.querySelector('#winCounter').innerHTML = wins;
 			} 	else if(totalScore > powerAttack)
 				{
 					losses+=1;
 					alert("You lost!");
-					alert("You have lost " + losses + " times!");
+					document.querySelector('#loseCounter').innerHTML = losses;
 				}
 		};
 
@@ -136,41 +138,46 @@ $(document).ready(function(){
 		totalScore += goku;
 		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
+		if(totalScore === powerAttack || totalScore > powerAttack)
+		{
+			initializeGame();
+		}
 	});
 
 	$('#gohan').on('click', function(event){
 		totalScore += gohan;
 		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
+		if(totalScore === powerAttack || totalScore > powerAttack)
+		{
+			initializeGame();
+		}
 	});
 
 	$('#vegeta').on('click', function(event){
 		totalScore += vegeta;
 		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
+		if(totalScore === powerAttack || totalScore > powerAttack)
+		{
+			initializeGame();
+		}
 	});
 
 	$('#trunks').on('click', function(event){
 		totalScore += trunks;
 		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
+		if(totalScore === powerAttack || totalScore > powerAttack)
+		{
+			initializeGame();
+		}
 	});
 
 	initializeGame();	
 
-		
-
-
-		console.log(powerAttack);
-		console.log(totalScore);
-		
-
-
 });
 
 </script>
-
-
-
 </body>
 </html>
