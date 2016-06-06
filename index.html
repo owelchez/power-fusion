@@ -67,7 +67,7 @@
 	    </div>
 
 			<div id="totalScore">
-				<p>Your total score is: <span>0</span></p>
+				<p>Your total score is: <span id="totalScoreWindow">0</span></p>
 			</div>
 
 <div id="powerAttack">
@@ -84,7 +84,7 @@
 
 $(document).ready(function(){
 	
-	/*************************  Audio File For Game  ***********************************/
+	/*************************  Audio File For the Game  ******************************/
 			var audioElement = document.createElement('audio');
 				        audioElement.setAttribute('src', 'Assets/chala.mp3');
 
@@ -124,41 +124,35 @@ $(document).ready(function(){
 				alert("You won!");
 				alert(wins);
 				alert("You have won " + wins + " times!");
-				initializeGame();
 			} 	else if(totalScore > powerAttack)
 				{
 					losses+=1;
 					alert("You lost!");
 					alert("You have lost " + losses + " times!");
-					initializeGame();
 				}
 		};
 
 	$('#goku').on('click', function(event){
 		totalScore += goku;
-		console.log(totalScore);
-
+		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
 	});
 
 	$('#gohan').on('click', function(event){
 		totalScore += gohan;
-		console.log(totalScore);
-
+		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
 	});
 
 	$('#vegeta').on('click', function(event){
 		totalScore += vegeta;
-		console.log(totalScore);
-
+		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
 	});
 
 	$('#trunks').on('click', function(event){
 		totalScore += trunks;
-		console.log(totalScore);
-
+		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		checkWin();
 	});
 
