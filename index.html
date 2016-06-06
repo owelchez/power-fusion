@@ -51,7 +51,6 @@
 
 		<div id="scoreCounter">
 			<img src="assets/images/newFight.gif" id="images1" alt="Fight" />
-			<!-- <img src="assets/images/gtFusion.gif" id="fusion" alt="Fight" /> -->
 		</div>
 
 	<div id="winLose">
@@ -117,6 +116,7 @@ $(document).ready(function(){
 		totalScore = 0;
 		document.querySelector('#totalScoreWindow').innerHTML = totalScore;
 		document.querySelector('#powerAttackWindow').innerHTML = powerAttack;
+		$("#images1").attr("src", "assets/images/newFight.gif");
 	};
 
 	function checkWin()
@@ -125,7 +125,9 @@ $(document).ready(function(){
 			{
 				wins+=1;
 				alert("You won!");
+				$("#images1").attr("src", "assets/images/finalFusion.gif");
 				document.querySelector('#winCounter').innerHTML = wins;
+  					$( "#images1" ).delay(2000000);
 			} 	else if(totalScore > powerAttack)
 				{
 					losses+=1;
