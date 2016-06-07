@@ -1,12 +1,3 @@
-html 
-{ 
-  background: url("assets/images/dragon.jpg") no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 p
 {
     font-size: 13px;
@@ -39,6 +30,7 @@ p
 {
     width: 80px;
     height: 90px;
+    border-radius: 10px;
     float:left;
     display:inline;
     margin: 3px;
